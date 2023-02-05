@@ -1,0 +1,167 @@
+body {
+  /* background-color: #dcdf0f69; */
+  background-image: url("./assets/mback.jpeg"), url("./assets/mfront.jpeg"), url("./assets/moon.jpeg"),
+    url("./assets/stars.jpeg");
+  background-color: #1f2833;
+  background-repeat: space;
+}
+
+.container {
+  background-color: rgba(31, 40, 51, 0.9);
+  /* background-color: rgba(255, 255, 255, 0.6); */
+}
+
+.container h4,
+.gen_res {
+  color: #c5c6c7;
+}
+
+#selectSearch_C {
+  width: 100%;
+}
+
+/* select {
+  width: 70vw;
+} */
+
+.searchContainer {
+  padding: 20px;
+}
+
+.periodContainer {
+  padding: 20px;
+}
+
+.riskContainer {
+  padding: 20px;
+}
+
+.btnContainer {
+  padding: 20px;
+}
+
+.submit_btn {
+  background-color: transparent;
+  color: white;
+  /* width: 40vw; */
+  /* border: 1px solid black !important; */
+  border: 1px solid #45a29e;
+  text-transform: uppercase;
+  border-radius: 0;
+  letter-spacing: 10px;
+  padding: 10px 20px;
+
+  /* box-shadow: 0px 4px 10px #d3d3d3; */
+}
+
+.submit_btn:hover {
+  /* color: white; */
+  background-color: #66fcf1;
+}
+
+.ch_card {
+  /* box-shadow: 0px 0px 10px #d3d3d3; */
+  color: white;
+  /* box-shadow: 0px 0px 10px black !important; */
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.ch_card table {
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+.trow1 {
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+}
+
+.trow2 {
+  text-align: center;
+  /* border: 1px solid red; */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card_sh {
+  /* box-shadow: 0px 0px 10px #d3d3d3; */
+  box-shadow: 0px 10px 20px black;
+  transform: scale(0.95);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card_sh:hover {
+  transform: scale(1);
+}
+
+.best_case {
+  background-color: #44bd32;
+}
+
+.avg_case {
+  background-color: #0097e6;
+}
+
+.worst_case {
+  background-color: #e74c3c;
+}
+
+.ratio_cards {
+  background-color: black;
+  color: white;
+}
+
+.modalBtn {
+  margin-left: 160px;
+  margin-bottom: 20px;
+}
+
+.c_logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.navbar {
+  background-color: #1f2833;
+  padding: 20px;
+  padding-left: 100px;
+}
+
+.navbar h3 {
+  color: #66fcf1;
+  width: 70vw;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.colNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  width: 80%;
+  border: 1px solid #45a29e;
+  letter-spacing: 10px;
+}
+
+.stock_price {
+  color: #c5c6c7;
+}
+
+.company_logo img {
+  border-radius: 100%;
+}

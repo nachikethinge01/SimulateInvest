@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.loadingScreen {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 1000;
+  transition: 1s;
+}
+
+.namaste_tagline {
+  font-size: 3vh;
+  color: #2ce94c;
+}
+
+.namaste {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 20px;
+  font-size: 10vw;
+  padding: 30px;
+  transition: 0.3s;
+  color: #3498db !important;
+  text-shadow: 0px 0px 10px #3498db !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.namaste::before,
+.namaste::after {
+  content: "";
+  position: absolute;
+}
+
+.namaste::before {
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.namaste::after {
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  transform: scale(1.2);
+  top: 0;
+  right: 0;
+  background-color: black;
+  animation: nullify 2s forwards ease-in;
+}
+
+.glowBlue {
+  color: #3498db !important;
+  text-shadow: 0px 0px 10px #3498db !important;
+}
+
+.glowBlue::before {
+  border-color: #3498db !important;
+}
+
+@keyframes nullify {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .namaste {
+    font-size: 10vh;
+  }
+}
