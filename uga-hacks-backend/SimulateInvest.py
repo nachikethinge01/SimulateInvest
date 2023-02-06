@@ -145,9 +145,10 @@ def get_info(ticker_symb, time_period = "1mo", risk = "Low"):
     iv = Call(company, d=10, m=2, y=2023, strike=140).implied_volatility()
     
 
-    resp.append(round(sorted(results.iloc[30])[0], 2))
+    
     resp.append(round(sorted(results.iloc[30])[-1], 2))
     resp.append(round(np.mean(sorted(results.iloc[30])), 2))
+    resp.append(round(sorted(results.iloc[30])[0], 2))
     
     resp.append(round(mean_returns, 2))
     resp.append(abs(round(sharpe_ratio, 2)))

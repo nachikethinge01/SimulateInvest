@@ -6,12 +6,13 @@ import apple from "../assets/logos/AAPL.png";
 import blk from "../assets/logos/BLK.png";
 import microsoft from "../assets/logos/MSFT.png";
 import netflix from "../assets/logos/NFLX.png";
+import am_air from "../assets/logos/AAL.png";
 import logo from "../assets/logo.jpeg";
 
 export default class home extends Component {
   m = new Map();
   options = [];
-  url = "http://localhost:3100/";
+  url = "http://localhost:3200/";
   constructor(props) {
     super(props);
     this.state = {
@@ -113,6 +114,24 @@ export default class home extends Component {
         modalBody:
           "Alpha is sometimes casually referred to as a measure of outperformance, meaning the alpha is the difference between what an asset returned and what its benchmark returned. For example, if a stock fund returned 12 percent and the S&P 500 returned 10 percent, the alpha would be 2 percent.",
       });
+    } else if (val === 4) {
+      await this.setState({
+        modalTitle: "Implied Volatility",
+        modalBody:
+          "One should sell options when the IV is high and a reduction in IV is imminent and One should buy options when the IV is low and an increase in IV is imminent.",
+      });
+    } else if (val === 5) {
+      await this.setState({
+        modalTitle: "Price to Earning Ratios",
+        modalBody:
+          "The ratio is used to find out whether they are overvalued or undervalued. The lower the ratio,  the better it is for the business and investors",
+      });
+    } else if (val === 6) {
+      await this.setState({
+        modalTitle: "Earning Growth Rate for next quarter",
+        modalBody:
+          "One should sell options when the IV is high and a reduction in IV is imminent and One should buy options when the IV is low and an increase in IV is imminent.",
+      });
     }
   };
 
@@ -211,6 +230,12 @@ export default class home extends Component {
                 <img src={blk} alt="black rock logo" />
               </div>
             ) : null}
+            {this.state.selectedCompany === "AAL" ? (
+              <div className="container text-center company_logo">
+                <img src={am_air} alt="black rock logo" />
+              </div>
+            ) : null}
+
             <div className="container company_name text-center">
               <h4>{this.m.get(this.state.selectedCompany)}</h4>
               <h5 className="stock_price">Stock Price: $ {this.state.modelResult[11]}</h5>
@@ -312,6 +337,15 @@ export default class home extends Component {
                 <div className="row">
                   <div className="col col-6 card_sh ratio_cards">
                     <div className="trow1">Price to Earning Ratios</div>
+                    <button
+                      type="button"
+                      className="btn btn-primary modalBtn"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      onClick={() => this.setModalData(5)}
+                    >
+                      ?
+                    </button>
                     <div className="trow2">{this.state.modelResult[9]}</div>
                   </div>
                   <div className="col col-6 card_sh ratio_cards">
@@ -326,6 +360,15 @@ export default class home extends Component {
                 <div className="row">
                   <div className="col col-12 card_sh ratio_cards">
                     <div className="trow1">Implied Volatility</div>
+                    <button
+                      type="button"
+                      className="btn btn-primary modalBtn"
+                      data-toggle="modal"
+                      data-target="#exampleModalCenter"
+                      onClick={() => this.setModalData(4)}
+                    >
+                      ?
+                    </button>
                     <div className="trow2">{this.state.modelResult[12]}</div>
                   </div>
                 </div>
